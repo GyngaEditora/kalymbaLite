@@ -21,5 +21,6 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": null,
   "secondaryTokenAttribute": null,
+  "manifest": "",
   "license": "LICENSE.txt"
 }
