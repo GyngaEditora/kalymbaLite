@@ -20,8 +20,8 @@
   ],
   "gridDistance": 5,
   "gridUnits": "ft",
-  "primaryTokenAttribute": pontosDeVida.atuais,
-  "secondaryTokenAttribute": axe.atuais,
+  "primaryTokenAttribute": "pontosDeVida.atuais",
+  "secondaryTokenAttribute": "axe.atuais",
   "url": "https://github.com/GyngaEditora/kalymbaLite/",
   "manifest": "https://raw.githubusercontent.com/GyngaEditora/kalymbaLite/main/system.json",
   "license": "LICENSE.txt"
