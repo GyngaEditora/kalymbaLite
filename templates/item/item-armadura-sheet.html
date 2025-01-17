@@ -1,0 +1,71 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+        </div>
+    </header>
+	
+	<div>
+		<table>
+			<tr>
+				<td>Resumo</td>
+				<td>
+					<input type="text" name="system.Resumo" value="{{item.system.Resumo}}" />
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div>
+	</div>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">Atributos</a>
+        <a class="item" data-tab="description">Description</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        {{!-- Stats Tab --}}
+        <div class="tab" data-group="primary" data-tab="stats">
+			<table>
+				<tr>
+					<td>Redução de Dano</td>
+					<td>
+						<input name="system.protecao" type="text" value="{{item.system.protecao}}"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Penalidade em Atributo</td>
+					<td>
+						<input name="system.penalidade" type="text" value="{{item.system.penalidade}}"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Preço</td>
+					<td>
+						<input name="system.preco" type="text" value="{{item.system.preco}}"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Peso</td>
+					<td>
+						<input name="system.peso" type="text" value="{{item.system.peso}}"/>
+					</td>
+				</tr>
+			</table>
+        </div>
+
+        {{!-- Description Tab --}}
+        <div class="tab" data-group="primary" data-tab="description">
+            <div>
+				<label>Descrição</label>
+				<div class="item-description">
+					{{editor Descricao target="system.Descricao" button=true editable=editable}}
+				</div>
+			</div>
+        </div>
+    </section>
+</form>

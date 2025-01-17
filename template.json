@@ -1,0 +1,250 @@
+{
+	"Actor": {
+		"types": ["actor", "npc"],
+		"templates": {
+			"base":{
+				"background":"",
+				"atributos": {
+					"forca": {
+						"base": 0,
+						"bonus": 0
+					},
+					"agilidade": {
+						"base": 0,
+						"bonus": 0
+					},
+					"vigor": {
+						"base": 0,
+						"bonus": 0
+					},
+					"intelecto": {
+						"base": 0,
+						"bonus": 0
+					},
+					"ginga": {
+						"base": 0,
+						"bonus": 0
+					},
+					"ori": {
+						"base": 0,
+						"bonus": 0
+					}
+				},
+				"pericias": {
+					"fisicas":{
+						"corrida": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "agilidade"
+						},
+						"cavalgada": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "agilidade"
+						},
+						"equilibrio": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "agilidade"
+						},
+						"escalada": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "forca"
+						},
+						"esquiva": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "agilidade"
+						},
+						"fuga": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "agilidade"
+						},
+						"furtividade": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "agilidade"
+						},
+						"iniciativa": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "agilidade"
+						},
+						"luta": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "forca"
+						},
+						"natacao": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "forca"
+						},
+						"potencia": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "forca"
+						},
+						"salto": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "agilidade"
+						},
+						"tiro": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "agilidade"
+						}
+					},
+					"sociais":{
+						"engancao": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "ginga"
+						},
+						"intimidacao": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "ginga"
+						},
+						"intuicao": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "ginga"
+						},
+						"labia": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "ginga"
+						},
+						"seducao": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "ginga"
+						}
+					},
+					"sentidos":{
+						"percepcao": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "ori"
+						}
+					},
+					"conhecimento":{
+						"civilizacoes": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "intelecto"
+						},
+						"criaturas": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "intelecto"
+						},
+						"misticismo": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "intelecto"
+						},
+						"natureza": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "intelecto"
+						}
+					},
+					"resistencias":{
+						"fortitude": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "vigor"
+						},
+						"vontade": {
+							"nivel": 0,
+							"bonus": 0,
+							"atributo": "ori"
+						}
+					},
+					"oficios":{}
+				},
+				"pontosDeVida": {
+					"max": 0,
+					"atuais": 0,
+					"modificador": 0
+				},
+				"poderMagico": 0,
+				"axe": {
+					"max": 0,
+					"atuais": 0
+				},
+				"nivel": 0,
+				"grau": 0,
+				"experiencia": 0,
+				"gana": 500,
+				"notas": ""
+			}
+		},
+		"actor":{
+			"templates":["base"]
+		},
+		"npc":{
+			"templates":["base"]
+		}
+	},
+	"Item": {
+		"types":["mandinga", "dom", "item", "arma", "armadura", "habilidade", "condicao"],
+		"templates": {
+			"base":{
+				"Resumo": "",
+				"Descricao": ""
+			}
+		},
+		"mandinga":{
+			"templates":["base"],
+			"acao": "",
+			"custo": 0,
+			"duracao": "",
+			"dificuldade": "",
+			"dissipabilidade": "",
+			"negacao": 0,
+			"nivel": 0,
+			"salvaguarda": 0,
+			"dano": 0
+		},
+		"dom":{
+			"templates":["base"],
+			"custo": 1,
+			"orixa": ""
+		},
+		"item":{
+			"templates":["base"],
+			"preco": 0
+		},
+		"arma":{
+			"templates":["base"],
+			"equipada": false,
+			"dano": "",
+			"bonus": 0,
+			"tipo": "",
+			"alcance": "",
+			"preco": 0
+		},
+		"armadura":{
+			"templates":["base"],
+			"equipada": false,
+			"peso": 0,
+			"protecao": 0,
+			"penalidade": 0,
+			"preco": 0
+		},
+		"habilidade":{
+			"templates":["base"],
+			"custo": 1
+		},
+		"condicao":{
+			"templates":["base"],
+			"tipo": ""
+		}
+	}
+}

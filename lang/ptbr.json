@@ -1,0 +1,63 @@
+{
+	"atributos": {
+		"forca": "Força",
+		"agilidade": "Agilidade",
+		"vigor": "Vigor",
+		"intelecto": "Intelecto",
+		"ginga": "Ginga",
+		"ori": "Ori",
+		"abreviado": {
+			"forca": "FOR",
+			"agilidade": "AGI",
+			"vigor": "VIG",
+			"intelecto": "INT",
+			"ginga": "GIN",
+			"ori": "ORI"
+		}
+	},
+	"pericias": {
+		"fisicas":{
+			"corrida": "Corrida",
+			"cavalgada": "Cavalgada",
+			"equilibrio": "Equilíbrio",
+			"escalada": "Escalada",
+			"esquiva": "Esquiva",
+			"fuga": "Fuga",
+			"furtividade": "Furtividade",
+			"iniciativa": "Iniciativa",
+			"luta": "Luta",
+			"natacao": "Natação",
+			"potencia": "Potência",
+			"salto": "Salto",
+			"tiro": "Tiro"
+		},
+		"sociais":{
+			"engancao": "Enganação",
+			"intimidacao": "Intimidação",
+			"intuicao": "Intuição",
+			"labia": "Lábia",
+			"seducao": "Sedução"
+		},
+		"sentidos":{
+			"percepcao": "Percepção"
+		},
+		"conhecimento":{
+			"civilizacoes": "Civilizações",
+			"criaturas": "Criaturas",
+			"misticismo": "Misticismo",
+			"natureza": "Natureza"
+		},
+		"resistencias":{
+			"fortitude": "Fortitude",
+			"vontade": "Vontade"
+		}
+	},
+	"pontosDeVida": "Pontos De Vida",
+	"pdoerMagico": "Poder Mágico",
+	"danoAgravado": "Dano Agravado",
+	"nivel": "Nível",
+	"experiencia": "Experiência",
+	"gana": "Gana",
+	"condicoes": "Condições",
+	"aparencia": "Aparência"
+}
