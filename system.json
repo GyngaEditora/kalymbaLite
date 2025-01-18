@@ -23,6 +23,7 @@
   "primaryTokenAttribute": "pontosDeVida.atuais",
   "secondaryTokenAttribute": "axe.atuais",
   "url": "https://github.com/GyngaEditora/kalymbaLite/",
-  "manifest": "https://raw.githubusercontent.com/GyngaEditora/kalymbaLite/main/system.json",
+  "manifest": "https://github.com/GyngaEditora/kalymbaLite/releases/download/test/system.json",
+  "download": "https://github.com/GyngaEditora/kalymbaLite/archive/refs/tags/test.zip"
   "license": "LICENSE.txt"
 }
