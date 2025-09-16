@@ -196,7 +196,9 @@ export class KalymbaActorSheet extends ActorSheet {
 	
 	async displayRoll(formulae, label){
 		let roll = new Roll(formulae, this.actor.system);
-		await roll.roll();
+		console.log(formulae);
+		//await roll.roll({"async": false});
+		await roll.evaluate();
 		if(roll.terms[0].total == 12){
 			label = label + "<br />\n" +
 				"<span style=\"font-size: 24px; font-style: bold; color:blue;\">ACERTO CRÍTICO</span>"

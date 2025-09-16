@@ -74,16 +74,32 @@
 			<tr>
 				<td>
 					<table>
+						<tr>
+							<td style="width:50%">Atributo</td>
+							<td>Base</td>
+							<td>+</td>
+							<td>Bônus</td>
+							<td>=</td>
+							<td>Total</td>
+						</tr>
 						{{#each actor.system.atributos as |attr id|}}
 							<tr>
 								<td style="width:50%">
 									<span>{{localize (concatenate "atributos." id)}}({{localize (concatenate "atributos." (concatenate "abreviado." id))}})</span>
 								</td>
-								<td style="width:50%">
+								<td>
 									<input style="width:40px" name="system.atributos.{{id}}.base" type="number" value="{{attr.base}}" />
+								</td>
+								<td>
 									+
+								</td>
+								<td>
 									<input style="width:40px" name="system.atributos.{{id}}.bonus" type="number" value="{{attr.bonus}}" />
+								</td>
+								<td>
 									=
+								</td>
+								<td>
 									{{attr.total}}
 								</td>
 							</tr>
@@ -167,8 +183,8 @@
         <a class="item" data-tab="pericias">Pericias</a>
         <a class="item" data-tab="peculiaridades">Peculiaridades</a>
         <a class="item" data-tab="equip">Equipamentos</a>
-        <a class="item" data-tab="magia">Magia</a>
-        <a class="item" data-tab="notas">Base de Dados</a>
+        <a class="item" data-tab="mandingas">Mandingas</a>
+        <a class="item" data-tab="notas">Notas</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -176,19 +192,35 @@
 		<div class="tab notes" data-group="primary" data-tab="pericias">
 			<table class="standardTable">
 				<tr>
-					<td style="width:44%; padding: 0 3%">
+					<td style="width:27%; padding: 0 3%">
 						//Físicas
 						<table class="standardTable">
+							<tr>
+								<td style="width:50%">Perícia</td>
+								<td>Base</td>
+								<td>+</td>
+								<td>Bônus</td>
+								<td>=</td>
+								<td>Total</td>
+							</tr>
 							{{#each actor.system.pericias.fisicas as |attr id|}}
 								<tr>
 									<td style="width:50%">
 										<span class="rollable skill-rollable" skill="{{attr.total}}" attr="{{attr.atributo}}">{{localize (concatenate "pericias.fisicas." id)}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
 									</td>
-									<td style="width:50%">
+									<td>
 										<input class="numberInput" name="system.pericias.fisicas.{{id}}.nivel" type="number" value="{{attr.nivel}}" />
+									</td>
+									<td>
 										+
+									</td>
+									<td>
 										<input class="numberInput" name="system.pericias.fisicas.{{id}}.bonus" type="number" value="{{attr.bonus}}" />
+									</td>
+									<td>
 										=
+									</td>
+									<td>
 										{{attr.total}}
 									</td>
 								</tr>
@@ -196,19 +228,35 @@
 						</table>
 					</td>
 						
-					<td>
+					<td style="width:27%; padding: 0 3%">
 						//Sociais
 						<table class="standardTable">
+							<tr>
+								<td style="width:50%">Perícia</td>
+								<td>Base</td>
+								<td>+</td>
+								<td>Bônus</td>
+								<td>=</td>
+								<td>Total</td>
+							</tr>
 							{{#each actor.system.pericias.sociais as |attr id|}}
 								<tr>
 									<td style="width:50%">
-										<span class="rollable skill-rollable" roll="{{attr.total}}">{{localize (concatenate "pericias.sociais." id)}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
+										<span class="rollable skill-rollable" skill="{{attr.total}}" attr="{{attr.atributo}}">{{localize (concatenate "pericias.sociais." id)}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
 									</td>
-									<td style="width:50%">
+									<td>
 										<input class="numberInput" name="system.pericias.sociais.{{id}}.nivel" type="number" value="{{attr.nivel}}" />
+									</td>
+									<td>
 										+
+									</td>
+									<td>
 										<input class="numberInput" name="system.pericias.sociais.{{id}}.bonus" type="number" value="{{attr.bonus}}" />
+									</td>
+									<td>
 										=
+									</td>
+									<td>
 										{{attr.total}}
 									</td>
 								</tr>
@@ -217,16 +265,32 @@
 						
 						//Conhecimentos
 						<table class="standardTable">
+							<tr>
+								<td style="width:50%">Perícia</td>
+								<td>Base</td>
+								<td>+</td>
+								<td>Bônus</td>
+								<td>=</td>
+								<td>Total</td>
+							</tr>
 							{{#each actor.system.pericias.conhecimento as |attr id|}}
 								<tr>
 									<td style="width:50%">
-										<span class="rollable skill-rollable" roll="{{attr.total}}">{{localize (concatenate "pericias.conhecimento." id)}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
+										<span class="rollable skill-rollable" skill="{{attr.total}}" attr="{{attr.atributo}}">{{localize (concatenate "pericias.conhecimento." id)}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
 									</td>
-									<td style="width:50%">
+									<td>
 										<input class="numberInput" name="system.pericias.conhecimento.{{id}}.nivel" type="number" value="{{attr.nivel}}" />
+									</td>
+									<td>
 										+
+									</td>
+									<td>
 										<input class="numberInput" name="system.pericias.conhecimento.{{id}}.bonus" type="number" value="{{attr.bonus}}" />
+									</td>
+									<td>
 										=
+									</td>
+									<td>
 										{{attr.total}}
 									</td>
 								</tr>
@@ -234,19 +298,35 @@
 						</table>
 					</td>
 						
-					<td>
+					<td style="width:27%; padding: 0 3%">
 						//Resistencias
 						<table class="standardTable">
+							<tr>
+								<td style="width:50%">Perícia</td>
+								<td>Base</td>
+								<td>+</td>
+								<td>Bônus</td>
+								<td>=</td>
+								<td>Total</td>
+							</tr>
 							{{#each actor.system.pericias.resistencias as |attr id|}}
 								<tr>
 									<td style="width:50%">
-										<span class="rollable skill-rollable" roll="{{attr.total}}">{{localize (concatenate "pericias.resistencias." id)}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
+										<span class="rollable skill-rollable" skill="{{attr.total}}" attr="{{attr.atributo}}">{{localize (concatenate "pericias.resistencias." id)}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
 									</td>
-									<td style="width:50%">
+									<td>
 										<input class="numberInput" name="system.pericias.resistencias.{{id}}.nivel" type="number" value="{{attr.nivel}}" />
+									</td>
+									<td>
 										+
+									</td>
+									<td>
 										<input class="numberInput" name="system.pericias.resistencias.{{id}}.bonus" type="number" value="{{attr.bonus}}" />
+									</td>
+									<td>
 										=
+									</td>
+									<td>
 										{{attr.total}}
 									</td>
 								</tr>
@@ -255,16 +335,32 @@
 						
 						//Sentidos
 						<table class="standardTable">
+							<tr>
+								<td style="width:50%">Perícia</td>
+								<td>Base</td>
+								<td>+</td>
+								<td>Bônus</td>
+								<td>=</td>
+								<td>Total</td>
+							</tr>
 							{{#each actor.system.pericias.sentidos as |attr id|}}
 								<tr>
 									<td style="width:50%">
-										<span class="rollable skill-rollable" roll="{{attr.total}}">{{localize (concatenate "pericias.sentidos." id)}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
+										<span class="rollable skill-rollable" skill="{{attr.total}}" attr="{{attr.atributo}}">{{localize (concatenate "pericias.sentidos." id)}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
 									</td>
-									<td style="width:50%">
+									<td>
 										<input class="numberInput" name="system.pericias.sentidos.{{id}}.nivel" type="number" value="{{attr.nivel}}" />
+									</td>
+									<td>
 										+
+									</td>
+									<td>
 										<input class="numberInput" name="system.pericias.sentidos.{{id}}.bonus" type="number" value="{{attr.bonus}}" />
+									</td>
+									<td>
 										=
+									</td>
+									<td>
 										{{attr.total}}
 									</td>
 								</tr>
@@ -274,18 +370,34 @@
 						//Oficios
 						<div>
 							<table class="standardTable">
+							<tr>
+								<td style="width:50%">Perícia</td>
+								<td>Base</td>
+								<td>+</td>
+								<td>Bônus</td>
+								<td>=</td>
+								<td>Total</td>
+							</tr>
 								{{#each actor.system.pericias.oficios as |attr id|}}
 									<tr>
 										<td style="width:50%">
 											<div>
-												<span class="rollable skill-rollable" roll="{{attr.total}}">{{id}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
+												<span class="rollable skill-rollable" skill="{{attr.total}}" attr="{{attr.atributo}}">{{id}}({{localize (concatenate "atributos.abreviado." attr.atributo)}})</span>
 											</div>
 										</td>
-										<td style="width:50%">
-											<input class="numberInput" name="system.pericias.sentidos.{{id}}.nivel" type="number" value="{{attr.nivel}}" />
+										<td>
+											<input class="numberInput" name="system.pericias.oficios.{{id}}.nivel" type="number" value="{{attr.nivel}}" />
+										</td>
+										<td>
 											+
-											<input class="numberInput" name="system.pericias.sentidos.{{id}}.bonus" type="number" value="{{attr.bonus}}" />
+										</td>
+										<td>
+											<input class="numberInput" name="system.pericias.oficios.{{id}}.bonus" type="number" value="{{attr.bonus}}" />
+										</td>
+										<td>
 											=
+										</td>
+										<td>
 											{{attr.total}}
 										</td>
 									</tr>
@@ -454,9 +566,9 @@
 			</div>
 		</div>
 				
-        <div class="tab notes" data-group="primary" data-tab="magia">
+        <div class="tab notes" data-group="primary" data-tab="mandingas">
 			<div>
-				<button class="item-control item-create" type='magia'>
+				<button class="item-control item-create" type='mandinga'>
 					<i class="fas fa-plus"></i>
 				</button>
 				<div class="items-list">
@@ -471,7 +583,7 @@
 							<td class="item-controls" />
 						</tr>
 						{{#each items as |item id|}}
-							{{#if (eqs item.type "magia")}}
+							{{#if (eqs item.type "mandinga")}}
 								<tr class="item" data-item-id="{{item._id}}" draggable="true">
 									<td class="item-img">
 										<img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
